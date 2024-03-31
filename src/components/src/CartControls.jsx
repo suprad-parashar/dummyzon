@@ -17,14 +17,14 @@ function CartControls(props) {
 	}
 
 	if (quantity === 0) {
-		return <button onClick={handleClick} name="add">Add to Cart</button>;
+		return <button onClick={handleClick} name="add" className="cart-control-button">Add to Cart</button>;
 	}
 	
 	return (
-		<div id="controls">
-			<button onClick={handleClick} name="remove">-</button>
-			<span id="quantity">{quantity}</span>
-			<button onClick={handleClick} name="add">+</button>
+		<div className="cart-controller">
+			<button onClick={handleClick} name="remove" className="cart-control-button">-</button>
+			<span className="cart-quantity">{quantity}</span>
+			<button onClick={handleClick} name="add" className="cart-control-button">+</button>
 		</div>
 	);
 }

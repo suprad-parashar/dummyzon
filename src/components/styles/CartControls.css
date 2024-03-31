@@ -1,4 +1,4 @@
-#controls {
+.cart-controller {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,12 +6,25 @@
     width: 100%;
 }
 
-#quantity {
+.cart-quantity {
     font-size: 2rem;
     text-align: center;
     padding: 8px;
 }
 
-#controls * {
+.cart-controller * {
     flex: 1;
+}
+
+.cart-control-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.cart-control-button:hover {
+    background-color: #555;
 }

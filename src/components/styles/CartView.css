@@ -27,12 +27,8 @@
     padding: 8px;
     width: 20%;
     height: 200px;
-}
-
-.product-cart-details {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    border-radius: 16px;
+    cursor: pointer;
 }
 
 .cart-main-control {
@@ -45,6 +41,12 @@
 .cart-main-control #title {
     font-weight: bold;
     font-size: 3rem;
+    text-decoration: none;
+}
+
+.cart-main-control #title:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .cart-main-control #quantity {
@@ -57,4 +59,17 @@
     font-weight: bold;
     width: 20%;
     text-align: center;
+}
+
+.back-button {
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    border: none;
+}
+
+.back-button:hover {
+    background-color: #555;
 }

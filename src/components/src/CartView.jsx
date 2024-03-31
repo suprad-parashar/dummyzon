@@ -5,15 +5,15 @@ import CartControls from "./CartControls";
 function CartView(props) {
 	return (
 		<div className="CartView">
-			<button id="back-button" onClick={() => props.updateData("view", -1)}>Back</button>
+			<button className="back-button" onClick={() => props.updateData("view", -1)}>Back</button>
 			<h1>Cart</h1>
 			{Object.keys(props.state.cart).length !== 0 ? (
 				<div id="cart-view">
 					{Object.values(props.state.cart).map((product) => (
 						<div key={product.id} className="product-list-view">
-							<img src={product.thumbnail} alt={product.title} className="product-cart-image"/>
+							<img src={product.thumbnail} alt={product.title} className="product-cart-image" onClick={() => props.updateData("view", product.id)}/>
 							<div className="cart-main-control">
-								<h2 id="title">{product.title}</h2>
+								<h2 id="title" onClick={() => props.updateData("view", product.id)}>{product.title}</h2>
 								<p id="quantity">Quantity: {product.quantity}</p>
 								<CartControls product={product} modifyCart={props.modifyCart} state={props.state}/>
 							</div>
