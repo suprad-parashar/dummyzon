@@ -1,4 +1,3 @@
-// import "../styles/Header.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import DropDownMenu from "./DropDownMenu";
@@ -24,12 +23,16 @@ function Header(props) {
 
 	return (
 		<header className="Header">
-			<h1 id="logo" onClick={() => props.updateData("all")}>Dummyzon</h1>
-			<DropDownMenu categories={categories} renderCategory={props.updateData}/>
-			<Search onSearch={props.updateData}/>
-			<div id="cart-div" onClick={() => props.updateData("view", -2)}>
-				<img src="/cart-logo.svg" alt="Cart" id="cart"/>
-				{displayQuantity !== 0 && <span>{displayQuantity}</span>}
+			<div className="header-container">
+				<div id="header-sub-logo-drop">
+					<h1 id="logo" onClick={() => props.updateData("all")}>Dummyzon</h1>
+					<DropDownMenu categories={categories} renderCategory={props.updateData}/>
+				</div>
+				<Search onSearch={props.updateData} />
+				<div id="cart-div" onClick={() => props.updateData("view", -2)}>
+					<img src="/cart-logo.svg" alt="Cart" id="cart"/>
+					{displayQuantity !== 0 && <span>{displayQuantity}</span>}
+				</div>
 			</div>
 		</header>
 	);

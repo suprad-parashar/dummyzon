@@ -1,4 +1,3 @@
-// import "../styles/DisplayView.css";
 import ProductCard from "./ProductCard";
 
 //Received Props - state, modifyCart, changeView

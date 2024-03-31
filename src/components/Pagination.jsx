@@ -1,5 +1,3 @@
-// import "../styles/Pagination.css";
-
 // Received Props - state, updatePage
 function Pagination(props) {
 	const recordsPerPage = 8;

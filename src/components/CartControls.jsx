@@ -1,4 +1,3 @@
-// import "../styles/CartControls.css";
 import { useEffect, useState } from "react";
 
 //Received Props - state, product, modifyCart

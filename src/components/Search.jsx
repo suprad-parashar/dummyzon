@@ -1,4 +1,3 @@
-// import "../styles/Search.css";
 import { useState } from "react";
 
 //Received Props - onSearch
@@ -15,9 +14,15 @@ function Search(props) {
 		setSearch("");
 	}
 
+	function handleEnter(event) {
+		if (event.key === "Enter") {
+			handleSubmit();
+		}
+	}
+
 	return (
 		<div className="search-bar">
-			<input type="text" placeholder="Find a product..." value={search} onChange={handleChange}/>
+			<input type="text" placeholder="Find a product..." value={search} onChange={handleChange} onKeyDown={handleEnter}/>
 			<button onClick={handleSubmit}>Search</button>
 		</div>
 	);

@@ -1,8 +1,10 @@
-// import "../styles/CartView.css";
 import CartControls from "./CartControls";
 
 //Received Props - state, modifyCart, updateData
 function CartView(props) {
+
+	const total = Object.values(props.state.cart).reduce((acc, product) => acc + (product.price * product.quantity), 0);
+
 	return (
 		<div className="CartView">
 			<button className="back-button" onClick={() => props.updateData("view", -1)}>Back</button>
@@ -20,8 +22,12 @@ function CartView(props) {
 							<p className="total-price">${(product.price * product.quantity).toFixed(2)}</p>
 						</div>
 					))}
+					<div id="cart-total">
+						<h2>Total: ${total.toFixed(2)}</h2>
+					</div>
 				</div>
 			) : <h1 id="empty-cart">Your cart is empty!</h1>}
+
 		</div>
 	)
 }
