@@ -1,0 +1,44 @@
+#display-heading {
+    font-size: 2.5rem;
+    padding: 16px 32px;
+    margin: 0;
+    margin-top: 32px;
+}
+
+#pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+#pagination button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#pagination button:hover {
+    background-color: #555;
+}
+
+#pagination button:disabled {
+    background-color: #6A6A6A;
+    cursor: not-allowed;
+}
+
+#pagination p {
+    margin: 0;
+}
+
+#empty-message {
+    font-size: 1.5rem;
+    padding: 16px;
+    margin: 0;
+    text-align: center;
+}

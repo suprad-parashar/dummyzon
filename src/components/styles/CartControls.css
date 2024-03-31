@@ -1,0 +1,17 @@
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+#quantity {
+    font-size: 2rem;
+    text-align: center;
+    padding: 8px;
+}
+
+#controls * {
+    flex: 1;
+}

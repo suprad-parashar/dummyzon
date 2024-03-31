@@ -1,0 +1,24 @@
+.GridView {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 32px;
+	padding: 32px;
+}
+
+@media (max-width: 1200px) {
+	.GridView {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media (max-width: 900px) {
+	.GridView {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 650px) {
+	.GridView {
+		grid-template-columns: 1fr;
+	}
+}

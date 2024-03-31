@@ -1,0 +1,104 @@
+#ProductDetails {
+    padding: 32px;
+}
+
+#back-button {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: transparent;
+}
+
+#back-button:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+#details-pane {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 32px;
+    gap: 32px;
+}
+
+#image-pane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    gap: 32px;
+}
+
+#image-pane img {
+    width: 75px;
+    height: 75px;
+    padding: 8px;
+}
+
+#image-pane img:hover {
+    cursor: pointer;
+    background-color: grey;
+    border-radius: 8px;
+}
+
+#info-pane {
+    flex: 1;
+    align-self: flex-start;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 32px;
+}
+
+#info-pane * {
+    margin: 0;
+    padding: 0;
+}
+
+#main-image {
+    width: 500px;
+    height: auto;
+    max-height: 500px;
+}
+
+#info-pane #title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#info-pane #brand {
+    margin-bottom: 16px;
+}
+
+#info-pane #rating {
+    font-size: 1.5rem;
+    padding: 4px 8px;
+}
+
+#info-pane #description {
+    font-size: 1rem;
+    margin-top: 16px;
+}
+
+#info-pane #price-div {
+    margin: 24px 0px;
+}
+
+#info-pane #price-div #price {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#controller {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: transparent;
+}
