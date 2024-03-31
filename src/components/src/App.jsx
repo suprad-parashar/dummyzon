@@ -29,7 +29,8 @@ function App() {
 				products: response.data["products"],
 				heading: "All Products",
 				pageNumber: 1,
-				emptyMessage: "Loading..."
+				emptyMessage: "Loading...",
+				view: -1,
 			});
 		} else if (mode === "search") {
 			const response = await axios.get(`https://dummyjson.com/products/search`, {

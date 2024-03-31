@@ -17,11 +17,11 @@ function CartView(props) {
 								<p id="quantity">Quantity: {product.quantity}</p>
 								<CartControls product={product} modifyCart={props.modifyCart} state={props.state}/>
 							</div>
-							<p id="total-price">${product.price * product.quantity}</p>
+							<p className="total-price">${(product.price * product.quantity).toFixed(2)}</p>
 						</div>
 					))}
 				</div>
-			) : <h1 id="empty-cart">Your cart is empty</h1>}
+			) : <h1 id="empty-cart">Your cart is empty!</h1>}
 		</div>
 	)
 }

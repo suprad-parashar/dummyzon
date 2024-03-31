@@ -16,7 +16,7 @@ function Search(props) {
 	}
 
 	return (
-		<div id="search">
+		<div className="search-bar">
 			<input type="text" placeholder="Find a product..." value={search} onChange={handleChange}/>
 			<button onClick={handleSubmit}>Search</button>
 		</div>

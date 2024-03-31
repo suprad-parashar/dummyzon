@@ -11,6 +11,7 @@
 
 #empty-cart {
     text-align: center;
+    font-size: 2rem;
 }
 
 .product-list-view {
@@ -54,7 +55,7 @@
     flex: 1;
 }
 
-#total-price {
+.total-price {
     font-size: 2rem;
     font-weight: bold;
     width: 20%;

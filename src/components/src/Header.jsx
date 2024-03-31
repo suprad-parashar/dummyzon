@@ -17,6 +17,11 @@ function Header(props) {
 		loadCategories();
 	}, []);
 
+	let displayQuantity = 0;
+	for (const cartProduct of Object.values(props.state.cart)) {
+		displayQuantity += cartProduct.quantity;
+	}
+
 	return (
 		<header className="Header">
 			<h1 id="logo" onClick={() => props.updateData("all")}>Dummyzon</h1>
@@ -24,7 +29,7 @@ function Header(props) {
 			<Search onSearch={props.updateData}/>
 			<div id="cart-div" onClick={() => props.updateData("view", -2)}>
 				<img src="/cart-logo.svg" alt="Cart" id="cart"/>
-				{Object.keys(props.state.cart).length !== 0 && <span>{Object.keys(props.state.cart).length}</span>}
+				{displayQuantity !== 0 && <span>{displayQuantity}</span>}
 			</div>
 		</header>
 	);

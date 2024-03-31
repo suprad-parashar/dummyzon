@@ -2,19 +2,6 @@
     padding: 32px;
 }
 
-#back-button {
-    background-color: black;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: transparent;
-}
-
-#back-button:hover {
-    background-color: #555;
-    cursor: pointer;
-}
-
 #details-pane {
     display: flex;
     flex-direction: row;
@@ -47,23 +34,26 @@
     border-radius: 8px;
 }
 
+#main-image {
+    width: 500px;
+    height: auto;
+    max-height: 500px;
+}
+
 #info-pane {
     flex: 1;
     align-self: flex-start;
+    display: flex;
+    flex-direction: column;
     border: 2px solid black;
     border-radius: 8px;
     padding: 32px;
+    gap: 8px;
 }
 
 #info-pane * {
     margin: 0;
     padding: 0;
-}
-
-#main-image {
-    width: 500px;
-    height: auto;
-    max-height: 500px;
 }
 
 #info-pane #title {
@@ -72,33 +62,33 @@
     text-decoration: none;
 }
 
-#info-pane #brand {
-    margin-bottom: 16px;
-}
-
 #info-pane #rating {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 4px 8px;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: fit-content;
+    border-radius: 8px;
 }
 
 #info-pane #description {
     font-size: 1rem;
-    margin-top: 16px;
 }
 
-#info-pane #price-div {
-    margin: 24px 0px;
+#info-pane #stock {
+    font-size: 1rem;
 }
 
-#info-pane #price-div #price {
-    font-size: 2.5rem;
-    font-weight: bold;
+#details-pricing {
+    padding: 8px 0;
 }
 
-#controller {
-    background-color: black;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: transparent;
+#details-cart-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
 }
