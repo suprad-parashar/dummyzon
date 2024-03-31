@@ -1,4 +1,4 @@
-import "../styles/MainView.css";
+// import "../styles/MainView.css";
 import Pagination from "./Pagination";
 import DisplayView from "./DisplayView";
 

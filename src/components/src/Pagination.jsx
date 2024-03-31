@@ -1,4 +1,4 @@
-import "../styles/Pagination.css";
+// import "../styles/Pagination.css";
 
 // Received Props - state, updatePage
 function Pagination(props) {

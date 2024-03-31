@@ -1,4 +1,4 @@
-import "../styles/CartView.css";
+// import "../styles/CartView.css";
 import CartControls from "./CartControls";
 
 //Received Props - state, modifyCart, updateData

@@ -1,4 +1,4 @@
-import "../styles/DropDownMenu.css"
+// import "../styles/DropDownMenu.css"
 import { Dropdown, DropdownButton } from "react-bootstrap";
 
 //Received Props - categories, renderCategory

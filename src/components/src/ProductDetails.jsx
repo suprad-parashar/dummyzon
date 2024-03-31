@@ -1,4 +1,4 @@
-import "../styles/ProductDetails.css";
+// import "../styles/ProductDetails.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CartControls from "./CartControls";
