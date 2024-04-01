@@ -28,10 +28,12 @@ function Header(props) {
 					<h1 id="logo" onClick={() => props.updateData("all")}>Dummyzon</h1>
 					<DropDownMenu categories={categories} renderCategory={props.updateData}/>
 				</div>
+				<div id="header-sub-search-cart">
 				<Search onSearch={props.updateData} />
 				<div id="cart-div" onClick={() => props.updateData("view", -2)}>
 					<img src="/cart-logo.svg" alt="Cart" id="cart"/>
 					{displayQuantity !== 0 && <span>{displayQuantity}</span>}
+				</div>
 				</div>
 			</div>
 		</header>
