@@ -9,7 +9,7 @@ function ProductCard(props) {
 			<img src={product.thumbnail} alt={product.title} onClick={() => props.changeView("view", product.id)} />
 			<div className="product-details">
 				<h1 id="title" onClick={() => props.changeView("view", product.id)}>{product.title}</h1>
-				<p id="rating">{product.rating} ★</p>
+				<p id="rating">{product.rating.toFixed(1)} ★</p>
 				<p id="description">{product.description}</p>
 				<div className="product-price-div">
 					<p id="old-price">${((product.price * 100) / (100 - product.discountPercentage)).toFixed(2)}</p>

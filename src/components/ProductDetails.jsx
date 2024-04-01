@@ -30,7 +30,7 @@ function ProductDetails(props) {
 					<div id="info-pane">
 						<h2 id="title">{product.title}</h2>
 						<p id="brand">Brand: {product.brand}</p>
-						<p id="rating">Rated {product.rating} ★ on 5</p>
+						<p id="rating">Rated {product.rating.toFixed(1)} ★ on 5</p>
 						<p id="description">{product.description}</p>
 						<div className="product-price-div" id="details-pricing">
 							<p id="old-price">${Math.round((product.price * 100) / (100 - product.discountPercentage))}</p>

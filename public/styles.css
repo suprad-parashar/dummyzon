@@ -72,7 +72,7 @@
 
 .cart-main-control #title {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: none;
 }
 
@@ -86,11 +86,28 @@
     flex: 1;
 }
 
+.cart-total-price {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+
+}
+
+.cart-total-price * {
+    margin: 0;
+    padding: 0;
+}
+
+.unit-price {
+    font-size: 1rem;
+    color: #6A6A6A;
+    text-align: end;
+}
+
 .total-price {
     font-size: 2rem;
     font-weight: bold;
-    width: 20%;
-    text-align: center;
+    text-align: end;
 }
 
 .back-button {
@@ -109,10 +126,19 @@
 #cart-total {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     gap: 16px;
     padding: 16px;
+}
+
+#clear-cart {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    border-radius: 8px;
 }
 
 #cart-total h2 {
@@ -140,6 +166,13 @@
     background-color: #555;
 }
 
+.dropdown-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    padding: 8px;
+}
+
 #logo {
     text-align: center;
     font-family: "Sacramento", cursive;
@@ -154,6 +187,7 @@
     top: 0;
     background-color: white;
     z-index: 1000;
+    border-bottom: 1px solid black;
 }
 
 .header-container {
@@ -220,6 +254,7 @@
     justify-content: center;
     align-items: center;
     gap: 16px;
+    margin-bottom: 60px;
     padding: 16px;
 }
 
@@ -381,6 +416,8 @@
 
 #main-image {
     width: 30%;
+    min-width: 30%;
+    max-width: 30%;
     height: auto;
     max-height: 500px;
 }
@@ -396,19 +433,17 @@
     gap: 8px;
 }
 
-#info-pane * {
-    margin: 0;
-    padding: 0;
-}
-
 #info-pane #title {
     font-size: 4rem;
     font-weight: bold;
+    padding: 0;
+    margin: 0;
     text-decoration: none;
 }
 
 #info-pane #rating {
     font-size: 1rem;
+    margin: 0;
     padding: 4px 8px;
     background-color: black;
     color: white;
@@ -419,14 +454,29 @@
 
 #info-pane #description {
     font-size: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 #info-pane #stock {
     font-size: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 #details-pricing {
     padding: 8px 0;
+    margin: 0;
+}
+
+#details-pricing #old-price {
+    padding: 0;
+    margin: 0;
+}
+
+.product-pricing * {
+    padding: 0;
+    margin: 0;
 }
 
 #details-cart-controls {

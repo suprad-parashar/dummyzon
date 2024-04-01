@@ -19,10 +19,14 @@ function CartView(props) {
 								<p id="quantity">Quantity: {product.quantity}</p>
 								<CartControls product={product} modifyCart={props.modifyCart} state={props.state}/>
 							</div>
-							<p className="total-price">${(product.price * product.quantity).toFixed(2)}</p>
+							<div className="cart-total-price">
+								<p className="unit-price">Unit Price: ${product.price.toFixed(2)}</p>
+								<p className="total-price">${(product.price * product.quantity).toFixed(2)}</p>
+							</div>
 						</div>
 					))}
 					<div id="cart-total">
+						<button id="clear-cart" onClick={() => props.updateData("cart", {})}>Clear Cart</button>
 						<h2>Total: ${total.toFixed(2)}</h2>
 					</div>
 				</div>
