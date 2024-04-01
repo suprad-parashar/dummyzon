@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/dummyzon/static/css/main.ff02f4b5.css",
-    "main.js": "/dummyzon/static/js/main.8c1d4e76.js",
+    "main.js": "/dummyzon/static/js/main.175de1bf.js",
     "index.html": "/dummyzon/index.html",
     "main.ff02f4b5.css.map": "/dummyzon/static/css/main.ff02f4b5.css.map",
-    "main.8c1d4e76.js.map": "/dummyzon/static/js/main.8c1d4e76.js.map"
+    "main.175de1bf.js.map": "/dummyzon/static/js/main.175de1bf.js.map"
   },
   "entrypoints": [
     "static/css/main.ff02f4b5.css",
-    "static/js/main.8c1d4e76.js"
+    "static/js/main.175de1bf.js"
   ]
 }
