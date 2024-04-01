@@ -94,7 +94,6 @@
     display: flex;
     width: 30%;
     flex-direction: column;
-
 }
 
 .cart-total-price * {
@@ -499,6 +498,19 @@
     text-decoration: none;
 }
 
+#checkout {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#checkout:hover {
+    background-color: #555;
+}
+
 #info-pane #rating {
     font-size: 1rem;
     margin: 0;
@@ -672,6 +684,7 @@
 
     #cart-total {
         justify-content: center;
+        flex-direction: column;
     }
 
     #cart-total h2 {

@@ -29,6 +29,7 @@ function CartView(props) {
 					<div id="cart-total">
 						<button id="clear-cart" onClick={() => props.updateData("cart", {})}>Clear Cart</button>
 						<h2>Total: ${total.toFixed(2)}</h2>
+						<button id="checkout">Checkout</button>
 					</div>
 				</div>
 			) : <h1 id="empty-cart">Your cart is empty!</h1>}
