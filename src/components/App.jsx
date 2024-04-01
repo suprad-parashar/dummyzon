@@ -20,10 +20,6 @@ function App() {
 	});
 
 	useEffect(() => {
-		handleStateChange("all");
-	}, []);
-
-	useEffect(() => {
 		localStorage.setItem("state", JSON.stringify(state));
 	}, [state]);
 

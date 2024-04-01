@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 //Received Props - state, product, modifyCart
 function CartControls(props) {
-	const [quantity, setQuantity] = useState(0);
 	const { product } = props;
-
-	useEffect(() => {
-		setQuantity(props.state.cart[product.id] ? props.state.cart[product.id].quantity : 0);
-	}, []);
+	const [quantity, setQuantity] = useState(props.state.cart[product.id] ? props.state.cart[product.id].quantity : 0);
 
 	function handleClick(event) {
 		const { name } = event.target;
