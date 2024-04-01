@@ -1,4 +1,5 @@
 import CartControls from "./CartControls";
+import { fixTitle } from "../utils/modifier";
 
 //Received Props - state, modifyCart, updateData
 function CartView(props) {
@@ -15,7 +16,7 @@ function CartView(props) {
 						<div key={product.id} className="product-list-view">
 							<img src={product.thumbnail} alt={product.title} className="product-cart-image" onClick={() => props.updateData("view", product.id)}/>
 							<div className="cart-main-control">
-								<h2 id="title" onClick={() => props.updateData("view", product.id)}>{product.title}</h2>
+								<h2 id="title" onClick={() => props.updateData("view", product.id)}>{fixTitle(product.title)}</h2>
 								<p id="quantity">Quantity: {product.quantity}</p>
 								<CartControls product={product} modifyCart={props.modifyCart} state={props.state}/>
 							</div>

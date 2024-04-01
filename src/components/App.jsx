@@ -6,13 +6,16 @@ import ProductDetails from "./ProductDetails";
 import CartView from "./CartView";
 
 function App() {
-	const [state, setState] = useState({
+
+	const [state, setState] = useState(
+		JSON.parse(localStorage.getItem("state")) || {
 		products: [],
 		cart: {},
 		heading: "All Products",
 		pageNumber: 1,
 		emptyMessage: "Loading...",
 		view: -1,
+		isSearch: false,
 		recordsPerPage: 8
 	});
 
@@ -20,21 +23,27 @@ function App() {
 		handleStateChange("all");
 	}, []);
 
+	useEffect(() => {
+		localStorage.setItem("state", JSON.stringify(state));
+	}, [state]);
+
 	async function handleStateChange(mode, data) {
 		if (mode === "all") {
-			const response = await axios.get("https://dummyjson.com/products/");
+			const response = await axios.get("https://dummyjson.com/products?limit=150");
 			setState({
 				...state,
 				products: response.data["products"],
 				heading: "All Products",
 				pageNumber: 1,
+				isSearch: false,
 				emptyMessage: "Loading...",
 				view: -1,
 			});
 		} else if (mode === "search") {
 			const response = await axios.get(`https://dummyjson.com/products/search`, {
 				params: {
-					q: data
+					q: data,
+					limit: 150
 				}
 			});
 			setState({
@@ -42,20 +51,24 @@ function App() {
 				products: response.data["products"],
 				heading: `Search Results for "${data}"`,
 				pageNumber: 1,
+				isSearch: true,
 				emptyMessage: "No products found."
 			});
 		} else if (mode === "category") {
-			const response = await axios.get(`https://dummyjson.com/products/category/${data}`);
+			const response = await axios.get(`https://dummyjson.com/products/category/${data}?limit=150`);
 			setState({
 				...state,
 				products: response.data["products"],
 				heading: data.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" "),
 				pageNumber: 1,
+				isSearch: false,
+				view: -1,
 				emptyMessage: "Loading..."
 			});
 		} else if (mode === "cart") {
 			setState({
 				...state,
+				isSearch: false,
 				cart: data
 			});
 		} else if (mode === "page") {
@@ -66,10 +79,10 @@ function App() {
 		} else if (mode === "view") {
 			setState({
 				...state,
+				isSearch: false,
 				view: data
 			});
 		}
-		console.log("Updated State: ", state);
 	}
 
 	function modifyCart(mode, product) {

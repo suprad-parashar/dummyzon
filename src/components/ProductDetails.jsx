@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CartControls from "./CartControls";
+import { fixTitle } from "../utils/modifier";
 
 //Received Props - state, updateData, modifyCart
 function ProductDetails(props) {
@@ -28,7 +29,7 @@ function ProductDetails(props) {
 					</div>
 					<img src={product.images[image]} alt={product.title + " Image " + image} id="main-image"/>
 					<div id="info-pane">
-						<h2 id="title">{product.title}</h2>
+						<h2 id="title">{fixTitle(product.title)}</h2>
 						<p id="brand">Brand: {product.brand}</p>
 						<p id="rating">Rated {product.rating.toFixed(1)} ★ on 5</p>
 						<p id="description">{product.description}</p>

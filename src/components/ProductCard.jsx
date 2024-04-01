@@ -1,4 +1,5 @@
 import CartControls from "./CartControls";
+import { fixTitle } from "../utils/modifier";
 
 // Received Props - product, modifyCart, state, changeView
 function ProductCard(props) {
@@ -6,9 +7,9 @@ function ProductCard(props) {
 
 	return (
 		<div className="ProductCard">
-			<img src={product.thumbnail} alt={product.title} onClick={() => props.changeView("view", product.id)} />
+			<img src={product.thumbnail} alt={fixTitle(product.title)} onClick={() => props.changeView("view", product.id)} />
 			<div className="product-details">
-				<h1 id="title" onClick={() => props.changeView("view", product.id)}>{product.title}</h1>
+				<h1 id="title" onClick={() => props.changeView("view", product.id)}>{fixTitle(product.title)}</h1>
 				<p id="rating">{product.rating.toFixed(1)} ★</p>
 				<p id="description">{product.description}</p>
 				<div className="product-price-div">
