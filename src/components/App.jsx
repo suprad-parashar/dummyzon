@@ -39,7 +39,8 @@ function App() {
 			const response = await axios.get(`https://dummyjson.com/products/search`, {
 				params: {
 					q: data,
-					limit: 150
+					limit: 150,
+					view: -1,
 				}
 			});
 			setState({
@@ -48,6 +49,7 @@ function App() {
 				heading: `Search Results for "${data}"`,
 				pageNumber: 1,
 				isSearch: true,
+				view: -1,
 				emptyMessage: "No products found."
 			});
 		} else if (mode === "category") {
